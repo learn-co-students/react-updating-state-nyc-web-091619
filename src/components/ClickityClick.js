@@ -2,17 +2,22 @@
 import React, { Component } from 'react'
 
 export default class ClickityClick extends Component {
-    constructor() {
-        super();
-        this.state = {
-            hasBeenClicked: false,
-            currentTheme: 'blue',
-        }
-    }
+    // constructor() {
+    //     super();
+    //     this.state = {
+    //         hasBeenClicked: false,
+    //         currentTheme: 'blue',
+    //     }
+    // }
 
-    handleClick = () => {
+    state = {
+        hasBeenClicked: false,
+        currentTheme: 'blue',
+    }
+    
+    handleClick = () => { 
         this.setState({
-            hasBeenClicked: true
+            hasBeenClicked: this.state.hasBeenClicked ? false : true
         })
     }
     
